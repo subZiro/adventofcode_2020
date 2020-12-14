@@ -68,3 +68,39 @@ count_move, count_repeat_binom = count_m_rb(arr, rd)
 arr_binom = [line * count_repeat_binom for line in arr]
 result = get_array_forest(arr_binom, rd, count_move)
 print(f'part one result: {len(result)}')
+
+
+# --- Part Two --- #
+"""
+Time to check the rest of the slopes - you need to minimize the probability 
+of a sudden arboreal stop, after all.
+
+In the above example, these slopes would find 2, 7, 3, 4, and 2 tree(s) respectively; 
+multiplied together, these produce the answer 336. 
+What do you get if you multiply together the number of trees encountered 
+on each of the listed slopes?
+"""
+
+rd_array = [[1, 1], [3, 1], [5, 1], [7, 1], [1, 2]]
+arr = get_binom()
+
+# элемент бинома леса
+f = open('../data/day_3.txt', 'r')
+arr = [line[:-1] for line in f]
+
+result = []
+for rd in rd_array:
+	count_move, count_repeat_binom = count_m_rb(arr, rd)
+	arr_binom = [line * count_repeat_binom for line in arr]
+	count_forest = len(get_array_forest(arr_binom, rd, count_move))
+	result.append(count_forest)
+
+p = 1
+for elem in result:
+	p *= elem
+
+print(f'part two result: {p}')
+
+
+
+
