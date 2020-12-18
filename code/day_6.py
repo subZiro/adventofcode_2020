@@ -58,3 +58,24 @@ for group in answer_groups:
 		ans.extend([a for a in answer])
 	result.extend(list(set(ans)))
 print(f'those counts part 1: {len(result)}')
+
+
+# --- Part Two --- #
+"""
+This list represents answers from five groups:
+	In the first group, everyone (all 1 person) answered "yes" to 3 questions: a, b, and c.
+	In the second group, there is no question to which everyone answered "yes".
+	In the third group, everyone answered yes to only 1 question, a. 
+		Since some people did not answer "yes" to b or c, they don't count.
+	In the fourth group, everyone answered yes to only 1 question, a.
+	In the fifth group, everyone (all 1 person) answered "yes" to 1 question, b.
+	In this example, the sum of these counts is 3 + 0 + 1 + 1 + 1 = 6.
+"""
+
+result = []
+for group in answer_groups:
+	count_user = len(group)
+	answ_counts = Counter("".join(group))
+	count = Counter(list(answ_counts.values()))[count_user]
+	result.append(count)
+print(f'those counts part 2: {sum(result)}')
