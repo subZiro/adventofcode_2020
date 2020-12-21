@@ -67,3 +67,41 @@ def part_one(data: dict):
 bag_data, bag_ref_data = get_data()
 result = part_one(bag_data)
 print(f'part one result: {result}')
+
+
+# --- Part Two --- #
+"""
+Consider again your shiny gold bag and the rules from the above example:
+
+faded blue bags contain 0 other bags.
+dotted black bags contain 0 other bags.
+vibrant plum bags contain 11 other bags: 5 faded blue bags and 6 dotted black bags.
+dark olive bags contain 7 other bags: 3 faded blue bags and 4 dotted black bags.
+
+So, a single shiny gold bag must contain 1 dark olive bag (and the 7 bags within it) 
+plus 2 vibrant plum bags (and the 11 bags within each of those): 1 + 1*7 + 2 + 2*11 = 32 bags!
+"""
+
+
+def count_bags_in_bag_req(bag: dict, color: str):
+    """
+    Рекурсивно проходит по цвету color и возвращает количество вложеных сумок 
+    """
+    result = []
+    for color_ref, count in bag[color]:
+        req = count_bags_in_bag_req(bag, color_ref)
+        result.append(count + count * req)
+    return sum(result)
+
+
+def part_two(data: dict):
+    """
+    Возвращает количество вложеных сумок
+    """
+    return count_bags_in_bag_req(data, 'shiny gold')
+
+
+result = part_two(bag_ref_data)
+print(f'part two result: {result}')
+
+
