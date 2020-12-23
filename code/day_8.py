@@ -69,3 +69,36 @@ def part_one(data: list):
 instructions = get_data()
 _, result = part_one(instructions)
 print(f'part one result: {result}')
+
+
+# --- Part Two --- #
+"""
+If you change the first instruction from nop +0 to jmp +0, 
+it would create a single-instruction infinite loop, never leaving that instruction. 
+If you change almost any of the jmp instructions, 
+the program will still eventually find another jmp instruction and loop forever.
+
+However, if you change the second-to-last instruction (from jmp -4 to nop -4), 
+the program terminates! The instructions are visited in this order:
+
+With this change, after the program terminates, 
+the accumulator contains the value 8 (acc +1, acc +1, acc +6).
+"""
+
+
+def part_two(data: list):
+    """
+    возвращает сумму acc перед зацикливанием инструкции программы
+    """
+    for i, (k, val) in enumerate(data):
+        data[i] = ['jmp', val] if k == 'nop' else ['nop', val]
+        code, result = part_one(data)
+        if code == 0:
+            return result
+        else:
+            data[i] = [k, val]
+
+
+result = part_two(instructions)
+print(f'part two result: {result}')
+
