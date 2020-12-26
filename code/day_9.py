@@ -47,3 +47,39 @@ def part_one(data: list, pre: int):
 data = get_data()
 result = part_one(data, 25)
 print(f'part one result: {result}')
+
+
+# --- Part Two --- #
+"""
+The final step in breaking the XMAS encryption relies on the invalid number you just found: 
+you must find a contiguous set of at least two numbers in your list which sum to the invalid 
+number from step 1.
+"""
+
+
+def get_min_max_sum(data: list):
+    """
+    Возвращает сумму минимального и максимального элемента списка data
+    """
+    return min(data) + max(data)
+
+
+def part_two(data: list, num: int):
+    """
+    Возвращает результат второго задания
+    """
+    arr = []
+    for x in data:
+        arr.append(x)
+        if sum(arr) > num:
+            while not sum(arr) <= num:
+                del arr[0]
+        if sum(arr) == num:
+            return get_min_max_sum(arr)
+    return None
+
+
+result_two = part_two(data, result)
+print(f'part two result: {result_two}')
+
+
