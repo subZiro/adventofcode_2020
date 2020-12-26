@@ -4,4 +4,4 @@
 
 
 ![my result: ](https://github.com/subZiro/adventofcode_2020/blob/main/result.png)
-[2020-12-13]
+[2020-12-26]
