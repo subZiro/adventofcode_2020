@@ -3,5 +3,5 @@
 
 
 
-![my result: ](https://github.com/subZiro/adventofcode_2020/blob/main/my_result.png)
-[2020-12-13]
+![my result: ](https://github.com/subZiro/adventofcode_2020/blob/main/result.png)
+[2020-12-26]
