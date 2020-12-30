@@ -36,3 +36,41 @@ data = get_data()
 result_one = part_one(data)
 print(f'part one result: {result_one}')
 
+
+# --- Part Two --- #
+def mix_force_data(data):
+    """
+    """
+    tmp = []
+    result = []
+
+    for x in data:
+        if x == 1:
+            tmp.append(x)
+        else:
+            if len(tmp) > 3:
+                cnt_ = (len(tmp)-1) * 2 + (len(tmp)-3)
+                result.append(cnt_)
+            elif len(tmp) > 1:
+                cnt_ = (len(tmp)-1)*2
+                result.append(cnt_)
+            tmp = []
+
+    return result
+
+
+def part_two(data):
+    """
+    Получение результата второй задачи
+    """
+    mix_data = mix_force_data(data)
+
+    result = 1
+    for x in mix_data:
+        result = result * x
+    return result
+
+
+data_dif = get_dif_array(data)
+result = part_two(data_dif)
+print(f'part two result: {result}')
