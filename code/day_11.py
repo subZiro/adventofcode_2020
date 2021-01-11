@@ -3,6 +3,7 @@
 from copy import deepcopy
 
 
+
 # --- Day 11: Seating System --- # 
 def get_data():
     """получение списка чисел из файла"""
@@ -77,7 +78,7 @@ def count_recerve(seating_array):
 
 
 # --- Part One --- #
-def part_one(data: list):
+def part_one(data):
 	"""
 	Получение результата первой задачи
 	"""

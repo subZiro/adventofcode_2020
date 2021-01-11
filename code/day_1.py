@@ -4,7 +4,7 @@
 
 
 from itertools import combinations
-
+ 
 arr_0 = [1721, 979, 366, 299, 675, 1456]
 x = 2020
 
@@ -29,5 +29,6 @@ Multiplying them together produces the answer, 241861950.
 comb = combinations(arr, 3)
 result = [c[0] * c[1] * c[2] for c in comb if sum(c) == x]
 print(f'Part Two: {result}')
+
 
 
