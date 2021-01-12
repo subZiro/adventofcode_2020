@@ -1,19 +1,15 @@
 # -*- coding: utf-8 -*-
+# --- Day 11: Seating System --- # 
 
 from copy import deepcopy
 
 
-
-# --- Day 11: Seating System --- # 
 def get_data():
     """получение списка чисел из файла"""
     with open('../data/day_11.txt', "r") as f:
         lines = f.readlines()
-
     result = [[x for x in line.strip()] for line in lines]
 
-    # [print(x) for x in result]
-    
     return result
 
 
@@ -53,8 +49,8 @@ def count_recirved(a, b, data, is_two):
 	"""
 	Подсчитывает количество занятых рядом мест
 	"""
-	count = 0
 
+	count = 0
 	for y in [-1, 0, 1]:
 		for x in [-1, 0, 1]:
 			if not (y == 0 and x == 0):
@@ -73,11 +69,11 @@ def count_recerve(seating_array):
 	"""
 	возвращает количество занятых мест
 	"""
+
 	arr = [s for line in seating_array for s in line if s == '#']
 	return len(arr)
 
 
-# --- Part One --- #
 def part_one(data):
 	"""
 	Получение результата первой задачи
@@ -85,12 +81,6 @@ def part_one(data):
 	return while_seating(data, 4)
 
 
-data = get_data()
-result_one = part_one(data)
-print(f'part one result: {result_one}')
-
-
-# --- Part Two --- #
 def part_two(data: list):
 	"""
 	Получение результата первой задачи
@@ -98,6 +88,13 @@ def part_two(data: list):
 	return while_seating(data, 5)
 
 
+data = get_data()
+
+# --- Part One --- #
+result_one = part_one(data)
+print(f'part one result: {result_one}')
+
+# --- Part Two --- #
 result_two = part_two(data)
 print(f'part two result: {result_two}')
 

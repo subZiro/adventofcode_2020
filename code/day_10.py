@@ -11,7 +11,6 @@ def get_data():
     return sorted(result)
 
 
-# --- Part One --- #
 def get_dif_array(data, last_number=0):
     """
     получение массива разности колебаний
@@ -32,12 +31,6 @@ def part_one(data):
     return dif_data.count(1)*dif_data.count(3)
     
 
-data = get_data()
-result_one = part_one(data)
-print(f'part one result: {result_one}')
-
-
-# --- Part Two --- #
 def mix_force_data(data):
     """
     """
@@ -71,6 +64,13 @@ def part_two(data):
     return result
 
 
+data = get_data()
+
+# --- Part One --- #
+result_one = part_one(data)
+print(f'part one result: {result_one}')
+
+# --- Part Two --- #
 data_dif = get_dif_array(data)
 result = part_two(data_dif)
 print(f'part two result: {result}')

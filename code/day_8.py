@@ -32,9 +32,10 @@ def get_data():
     for line in lines:
         inst_one = line.strip().split()
         inst_one[1] = int(inst_one[1])
-       
         result.append(inst_one)
+
     return result
+
 
 def part_one(data: list):
     """
@@ -67,6 +68,7 @@ def part_one(data: list):
 
 
 instructions = get_data()
+
 _, result = part_one(instructions)
 print(f'part one result: {result}')
 
@@ -101,4 +103,3 @@ def part_two(data: list):
 
 result = part_two(instructions)
 print(f'part two result: {result}')
-

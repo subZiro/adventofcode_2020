@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 # --- Day 9: Encoding Error --- #
 
+
 from itertools import combinations
 
-
-# --- Part One --- #
 """
 For example, suppose your preamble consists of the numbers 1 through 25 in a random order. 
 To be valid, the next number must be the sum of two of those numbers:
@@ -22,6 +21,7 @@ Now, for the next number to be valid, there needs to be some pair of numbers amo
     65 would not be valid, as no two of the available numbers sum to it.
     64 and 66 would both be valid, as they are the result of 19+45 and 21+45 respectively.
 """
+
 
 def get_data():
     """получение списка чисел из файла"""
@@ -44,18 +44,11 @@ def part_one(data: list, pre: int):
     return None
 
 
-data = get_data()
-result = part_one(data, 25)
-print(f'part one result: {result}')
-
-
-# --- Part Two --- #
 """
 The final step in breaking the XMAS encryption relies on the invalid number you just found: 
 you must find a contiguous set of at least two numbers in your list which sum to the invalid 
 number from step 1.
 """
-
 
 def get_min_max_sum(data: list):
     """
@@ -79,7 +72,12 @@ def part_two(data: list, num: int):
     return None
 
 
+data = get_data()
+
+# --- Part One --- #
+result = part_one(data, 25)
+print(f'part one result: {result}')
+
+# --- Part Two --- #
 result_two = part_two(data, result)
 print(f'part two result: {result_two}')
-
-

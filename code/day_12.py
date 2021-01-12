@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
 
-# --- Day 12: Rain Risk --- # 
+import math
 
+# --- Day 12: Rain Risk --- # 
 """
 The navigation instructions (your puzzle input) consists of a sequence of single-character 
 actions paired with integer input values. After staring at them for a few minutes, 
@@ -25,6 +26,7 @@ def get_data():
     result = [(line.strip()[0], int(line.strip()[1:])) for line in lines]
 
     return result
+
 
 def move(pos, dir, mv):
     """Движение корабля"""
@@ -57,7 +59,6 @@ def move(pos, dir, mv):
     return pos
 
 
-# --- Part One --- #
 def part_one(data: list, start: str = 'E'):
     """Получение результата первой задачи"""
 
@@ -67,17 +68,6 @@ def part_one(data: list, start: str = 'E'):
 
     result = abs(position[1]['N'] - position[1]['S']) + abs(position[1]['E'] - position[1]['W'])
     return result
-
-
-data = get_data()
-result_one = part_one(data)
-print(f'part one result: {result_one}')
-
-
-
-# --- Part Two --- #
-
-import math
 
 
 def rotate(origin, point, angle):
@@ -115,7 +105,12 @@ def part_two(data: list):
     return abs(position['x']) + abs(position['y'])
 
 
+data = get_data()
+
+# --- Part One --- #
+result_one = part_one(data)
+print(f'part one result: {result_one}')
+
+# --- Part Two --- #
 result_two = part_two(data)
 print(f'part two result: {result_two}') 
-
-
