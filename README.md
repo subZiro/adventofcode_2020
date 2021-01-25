@@ -33,26 +33,26 @@
 
 [Day 13: ](https://adventofcode.com/2020/day/13) - [Python (part 1, 2)](https://github.com/subZiro/adventofcode_2020/blob/main/code/day_13.py)
 
-[Day 13: ](https://adventofcode.com/2020/day/14) - []
+[Day 14: ](https://adventofcode.com/2020/day/14) - [Python (part 1, 2)](https://github.com/subZiro/adventofcode_2020/blob/main/code/day_14.py)
 
-[Day 13: ](https://adventofcode.com/2020/day/15) - []
+[Day 15: ](https://adventofcode.com/2020/day/15) - []
 
-[Day 13: ](https://adventofcode.com/2020/day/16) - []
+[Day 16: ](https://adventofcode.com/2020/day/16) - []
 
-[Day 13: ](https://adventofcode.com/2020/day/17) - []
+[Day 17: ](https://adventofcode.com/2020/day/17) - []
 
-[Day 13: ](https://adventofcode.com/2020/day/18) - []
+[Day 18: ](https://adventofcode.com/2020/day/18) - []
 
-[Day 13: ](https://adventofcode.com/2020/day/19) - []
+[Day 19: ](https://adventofcode.com/2020/day/19) - []
 
-[Day 13: ](https://adventofcode.com/2020/day/20) - []
+[Day 20: ](https://adventofcode.com/2020/day/20) - []
 
-[Day 13: ](https://adventofcode.com/2020/day/21) - []
+[Day 21: ](https://adventofcode.com/2020/day/21) - []
 
-[Day 13: ](https://adventofcode.com/2020/day/22) - []
+[Day 22: ](https://adventofcode.com/2020/day/22) - []
 
-[Day 13: ](https://adventofcode.com/2020/day/23) - []
+[Day 23: ](https://adventofcode.com/2020/day/23) - []
 
-[Day 13: ](https://adventofcode.com/2020/day/24) - []
+[Day 24: ](https://adventofcode.com/2020/day/24) - []
 
-[Day 13: ](https://adventofcode.com/2020/day/25) - []
+[Day 25: ](https://adventofcode.com/2020/day/25) - []
