@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
+# --- Day 14: Docking Data --- #
+
 
 from itertools import product
-
-
-# --- Day 14: Docking Data --- #
 
 
 def get_data():
